@@ -6,6 +6,10 @@ import os
 openai_api_key = st.secrets["openai"]["api_key"]
 client = OpenAI(api_key  = openai_api_key)
 
+# Streamlit 앱 레이아웃
+st.title("AI 이미지 생성기")
+st.write("텍스트 프롬프트를 입력하고 AI 이미지를 생성하세요.")
+
 # 이미지 사이즈와 장 수 선택 메뉴 추가  
 size_options = ["640x480", "800x600", "1024x768"]  
 num_images_options = [1, 2]  
