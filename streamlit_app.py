@@ -1,4 +1,10 @@
-import streamlit as st  
+import streamlit as st
+from openai import OpenAI
+import os
+
+# OpenAI 클라이언트 초기화
+openai_api_key = st.secrets["openai"]["api_key"]
+client = OpenAI(api_key  = openai_api_key)
 
 # 이미지 사이즈와 장 수 선택 메뉴 추가  
 size_options = ["640x480", "800x600", "1024x768"]  
